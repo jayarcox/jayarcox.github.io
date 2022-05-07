@@ -126,7 +126,7 @@ embed {
 iframe {
   margin: auto;
 }
-@media only screen and (min-width: 981px) {
+@media only screen and (min-width: 961px) {
   .page {
     width: 900px;
   }
