@@ -11,7 +11,7 @@ body {
   background-color: #eeeeee;
 }
 .page {
-  width: 400px;
+  width: 100%;
 }
 header {
   background-color: #898989;
@@ -126,7 +126,7 @@ embed {
 iframe {
   margin: auto;
 }
-@media only screen and (min-width: 1081px) {
+@media only screen and (min-width: 981px) {
   .page {
     width: 900px;
   }
