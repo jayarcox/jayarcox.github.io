@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet J.R. Cox</title>
+<link href="../css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="../images/favicon copy 2.png" type="image/png">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Main Container -->
+  <!-- Navigation -->
+  <header> 
+	  <div class="header-container">
+	  <a href="">
+    <h4 class="logo">J.R. Cox</h4>
+    </a>
+		  <button class="menu-toggle" aria-label="menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav>
+      <ul>
+        <li class="home"><a href="../html/index.html">HOME</a></li>
+        <li class="dropdown"><a href="#about" class="dropdown-toggle">PERFORMER ▾</a>
+		  		<div class="dropdown-content"> 
+			 		 <a href="../html/voice.html">VOICE</a>
+			 		 <a href="../html/screen.html">SCREEN</a>
+			</div></li>
+		  <li class="dropdown"><a href="#about" class="dropdown-toggle">STORYTELLER ▾</a>
+		  		<div class="dropdown-content"> 
+			 		 <a href="../html/video.html">VIDEO</a>
+			 		 <a href="../html/writing.html">WRITING</a>
+			</div></li>
+		  <li class="dropdown"><a href="#about" class="dropdown-toggle">ARTIST ▾</a>
+		  		<div class="dropdown-content artist-dropdown"> 
+			 		 <a href="../html/digital.html">DIGITAL</a>
+			 		 <a href="../html/traditional.html">TRADITIONAL</a>
+			</div></li>
+        <li class="contact"> <a href="../html/contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+	  </div>  
+  </header>
+	<div class="container">
+	<section class="top_banner"><h2>Send Me a Message</h2></section>
+	<section class="thankYouMessage"><div class="about">
+<p class="thanks">Thank you for reaching out. I'll get back to you soon.</p>
+		<div class="whitespace"></div>
+		</div>
+	</section>
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+  </section>
+  <!-- Copyrights Section -->
+<div class="copyright">&copy;2026 J.R. Cox</div>
+	</div>
+<!-- Main Container Ends -->
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("header");
+  const menuButton = document.querySelector(".menu-toggle");
+
+  // Hamburger button
+  menuButton.addEventListener("click", function () {
+    const open = header.classList.toggle("menu-open");
+    this.setAttribute("aria-expanded", open);
+  });
+
+  // Dropdown toggles
+  const toggles = document.querySelectorAll(".dropdown-toggle");
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault(); // prevent jumping to #about
+      const dropdown = this.nextElementSibling;
+
+      // close other dropdowns
+      document.querySelectorAll(".dropdown-content").forEach(dc => {
+        if (dc !== dropdown) {
+          dc.classList.remove("show");
+        }
+      });
+
+      dropdown.classList.toggle("show");
+    });
+  });
+
+  // Close the menu when a link inside it is tapped
+  document.querySelectorAll(".dropdown-content a, .home a, .contact a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      header.classList.remove("menu-open");
+    });
+  });
+});
+</script>
+</body>
+</html>
